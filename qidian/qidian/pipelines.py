@@ -25,10 +25,8 @@ class QidianPipeline:
         sql_add = """insert into qidian(title,url,author,category,status,bref)
                 VALUES (%s,%s,%s,%s,%s,%s)"""
         sql_update = """update qidian set author=%s,category=%s,status=%s,bref=%s  where title=%s and url=%s"""
-        data_add = (item["title"], item["url"], item["author"], item["category"], item["status"]
-                , item["bref"])
-        data_update = (item["author"], item["category"], item["status"]
-                    , item["bref"], item["title"], item["url"])
+        data_add = (item["title"], item["url"], item["author"], item["category"], item["status"], item["bref"])
+        data_update = (item["author"], item["category"], item["status"], item["bref"], item["title"], item["url"])
         title = item["title"]
         url = item['url']
         try:
